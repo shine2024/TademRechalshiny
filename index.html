@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>shiny portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    body {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        display:grid;
+        justify-content:center;
+        align-content:center;
+        background-color: #FFFF00;
+        font:5vh Lora;
+    }
+    
+    a {
+        color:rgba(198, 53, 53, 0.667);
+        text-decoration:rgba(164, 33, 33, 0.267) wavy underline;
+        transition:all 0.3s;
+        &:hover {
+            color:rgba(146, 28, 28, 0.2);
+            text-shadow:0 0 100px #c20b0b;
+        }
+    }
+    
+    canvas {
+        position:fixed;
+        z-index:-1;
+    }
+    .w2{
+        width:98vw;
+         display: flex;
+        justify-content: center;
+    
+    }
+    .mee{
+        width: 30%;
+        
+        box-shadow: 0 0 10px 5px #ffffff;
+        align-items: center;
+        align-content: center;
+        border-radius: 50%;
+    }
+    .border{
+        box-shadow: 0 0 10px 5px #ffffff;
+    }
+    .h1>h1{
+     
+        color: white;
+        text-align: center;
+    }
+    .w3{
+        padding:2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    .w3>div>img{
+    margin-bottom: px;
+    width: auto;
+    height: 40px;
+    
+    }
+    .w3>div>a{
+        
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    }
+    .re{
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+    }
+    .card-text{
+      font-size: small;
+    }
+    
+    @media only screen and (min-width: 1300px) {
+        .w3{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+    margin-left: 40rem;
+            
+        }
+        .app{
+            display: flex;
+            gap: 20px 50px;
+        }
+      }
+      @import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+    
+        body {
+            display:grid;
+            justify-content:center;
+            align-content:center;
+            background-color: #FFFF00;
+            font:5vh Lora;
+            padding: 7px;
+            
+        }
+        
+        a {
+            color:rgba(198, 53, 53, 0.667);
+            text-decoration:rgba(164, 33, 33, 0.267) wavy underline;
+            transition:all 0.3s;
+            &:hover {
+                color:rgba(146, 28, 28, 0.2);
+                text-shadow:0 0 100px #c20b0b;
+            }
+        }
+        div>h1{
+            padding: 15px;
+            color: #fff;
+        }
+        
+        canvas {
+            position:fixed;
+            z-index:-1;
+        }
+      .para{
+        font-size: x-large;
+        color: #fff;
+      }
+        .title {
+            font-size: calc(1.525rem + 3.3vw);
+          }
+          .card{
+        box-shadow: 0 0 10px 5px #ffffff;
+        background-color: rgba(245, 245, 245, 0.4); 
+          }
+          h2{
+            color: #fff;
+            font-family: monospace;
+          }
+          
+        
+        .e{
+            width: 300px;
+        box-shadow: 0 0 10px 5px #ffffff;
+        margin: 1rem;
+        
+        }
+          
+          @media (min-width: 250px) {
+            .title {
+              font-size: 4rem;
+              
+            }
+            .resize_fit_center{ 
+            width: 30%;
+            border-radius: 50%;
+        box-shadow: 0 0 10px 5px #ffffff;
+        
+    
+              }
+    
+              .container{
+                display: flex;
+                justify-content: center;
+              }
+              .hello{
+                display: flex;
+                margin: 40px;
+                gap: 20px 50px;
+            }
+            .card{
+                width: 30%;
+            }
+          }
+          
+          @media (max-width: 250px) {
+            .container {
+                margin: 10px;
+                width: 115px;
+                height: 115px;
+                line-height: 115px;
+                text-align: center;
+        box-shadow: 0 0 10px 5px #ffffff;
+                
+            }
+            .resize_fit_center {
+                max-width:100%;
+                max-height:100%;
+                vertical-align: middle;
+            }
+            .hello{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                background-color: transparents;
+               
+            }
+            .card{
+                width:100%;
+                margin-bottom: 30px;
+               
+            }
+          }
+    
+          @media (max-width: 600px){
+            
+            .para{
+                font-size: small;
+                color: #fff;
+              }
+              .card {
+                width: 100%; /* Adjust the width as needed for your design */
+            }
+              .hello{
+                display: flex;
+                flex-direction: column;
+                
+            }
+          .app{
+            display: flex;
+            flex-direction: column;
+            
+          }
+          .e{
+            margin: 10px;
+            width: 100%;
+        box-shadow: 0 0 10px 5px #ffffff;
+    
+          }
+          }
+       
+  </style>
+
+
+
+
+</head>
+  <body>
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <!-- Navbar content -->
+        
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#hello">Tadem Rechal Shiny</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#hello">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="resume.html" target="_blank">Resume</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#hrr" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      projects
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#vieo">Editing</a></li>
+                      <li><a class="dropdown-item" href="#prooo">Web pages</a></li>
+                      <li><a class="dropdown-item" href="#word">wordpress</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="#connect">Contact</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          
+      </nav>
+
+      <div id="hello">
+        <h1 class="text-white title " style="text-shadow: 1px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+        1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff; text-align:center;font-size:6vw">Tadem Rechal shiny</h1>
+        
+    </div>
+    <div class='container'>
+        <img class='resize_fit_center'
+          src='me.png' />
+        </a>
+    </div>
+    <div>
+        <p class="para">
+
+          Hey there! 👋 I'm Tadem Rechal, a creative mind passionate about editing and web development. I add that extra shine to projects with my editing skills and bring ideas to life through web development. Let's create something amazing together!
+          
+        </p>
+    </div>
+<div>
+
+</div>
+
+
+<div  style="margin: 2rem;">
+    
+    <div class="connect" >
+        <h2>Connect with me:</h2>
+        <div> <a href="https://www.youtube.com/channel/UCILD985x_dfyFtTzSm2HYNg" target="_blank">
+            <p class="para">
+                <svg width="48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="youtube"><g fill-rule="evenodd" clip-rule="evenodd"><path fill="#F44336" d="M15.32 4.06c-.434-.772-.905-.914-1.864-.968C12.498 3.027 10.089 3 8.002 3c-2.091 0-4.501.027-5.458.091-.957.055-1.429.196-1.867.969C.23 4.831 0 6.159 0 8.497v.008c0 2.328.23 3.666.677 4.429.438.772.909.912 1.866.977.958.056 3.368.089 5.459.089 2.087 0 4.496-.033 5.455-.088.959-.065 1.43-.205 1.864-.977.451-.763.679-2.101.679-4.429v-.008c0-2.339-.228-3.667-.68-4.438z"></path><path fill="#FAFAFA" d="M6 11.5v-6l5 3z" ></path></g></svg> YOU TUBE
+            </p>
+        </a></div>
+       
+        <div><a href="https://www.instagram.com/rechal_and_shiny/" target="_blank">
+            <p class="para">
+                <svg width="48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="instagram"><linearGradient id="a" x1="1.464" x2="14.536" y1="14.536" y2="1.464" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFC107"></stop><stop offset=".507" stop-color="#F44336"></stop><stop offset=".99" stop-color="#9C27B0"></stop></linearGradient><path fill="url(#a)" d="M11 0H5a5 5 0 0 0-5 5v6a5 5 0 0 0 5 5h6a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zm3.5 11c0 1.93-1.57 3.5-3.5 3.5H5c-1.93 0-3.5-1.57-3.5-3.5V5c0-1.93 1.57-3.5 3.5-3.5h6c1.93 0 3.5 1.57 3.5 3.5v6z"></path><linearGradient id="b" x1="5.172" x2="10.828" y1="10.828" y2="5.172" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFC107"></stop><stop offset=".507" stop-color="#F44336"></stop><stop offset=".99" stop-color="#9C27B0"></stop></linearGradient><path fill="url(#b)" d="M8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0 6.5A2.503 2.503 0 0 1 5.5 8c0-1.379 1.122-2.5 2.5-2.5s2.5 1.121 2.5 2.5c0 1.378-1.122 2.5-2.5 2.5z"></path><linearGradient id="c" x1="11.923" x2="12.677" y1="4.077" y2="3.323" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFC107"></stop><stop offset=".507" stop-color="#F44336"></stop><stop offset=".99" stop-color="#9C27B0"></stop></linearGradient><circle cx="12.3" cy="3.7" r=".533" fill="url(#c)"></circle></svg>INSTAGRAM
+            </p>
+        </a></div>
+        
+       <div> <a href="https://github.com/shine2024" target="_blank">
+        <p class="para">
+            <svg  xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48" id="github"><path fill="#fff" d="M24.0002 0C10.747 0 0 11.0169 0 24.6076C0 35.4799 6.87679 44.7039 16.4128 47.9577C17.6123 48.1855 18.0526 47.4239 18.0526 46.7739C18.0526 46.1872 18.0304 44.2487 18.02 42.1925C11.3431 43.6811 9.93424 39.2891 9.93424 39.2891C8.84249 36.4448 7.26945 35.6885 7.26945 35.6885C5.09191 34.1613 7.43359 34.1926 7.43359 34.1926C9.84363 34.3662 11.1126 36.7285 11.1126 36.7285C13.2532 40.4904 16.7272 39.4028 18.0967 38.7741C18.3121 37.1836 18.9341 36.0981 19.6205 35.4836C14.2897 34.8613 8.6859 32.7513 8.6859 23.3224C8.6859 20.6358 9.62345 18.4406 11.1587 16.7174C10.9095 16.0976 10.088 13.5947 11.3912 10.2052C11.3912 10.2052 13.4066 9.54386 17.993 12.7276C19.9074 12.1824 21.9606 11.9089 24.0002 11.8996C26.0398 11.9089 28.0946 12.1824 30.0126 12.7276C34.5934 9.54386 36.606 10.2052 36.606 10.2052C37.9124 13.5947 37.0905 16.0976 36.8413 16.7174C38.3801 18.4406 39.3113 20.6358 39.3113 23.3224C39.3113 32.7737 33.6968 34.8548 28.3525 35.464C29.2133 36.2276 29.9804 37.7252 29.9804 40.021C29.9804 43.3135 29.9526 45.9634 29.9526 46.7739C29.9526 47.4288 30.3846 48.1961 31.6011 47.9544C41.132 44.697 48 35.4762 48 24.6076C48 11.0169 37.2546 0 24.0002 0"></path><path fill="#161514" d="M9.16085 35.1623C9.10809 35.2833 8.92085 35.3196 8.75027 35.2365 8.57652 35.157 8.47893 34.992 8.53526 34.8706 8.58683 34.7459 8.77447 34.7112 8.94782 34.7947 9.12197 34.8742 9.22115 35.0408 9.16085 35.1623M10.1312 36.263C10.0169 36.3707 9.79358 36.3207 9.64205 36.1504 9.48535 35.9806 9.456 35.7534 9.57183 35.6441 9.68965 35.5363 9.90624 35.5868 10.0633 35.7566 10.22 35.9285 10.2506 36.1541 10.1312 36.263M11.0757 37.6663C10.9289 37.77 10.6889 37.6728 10.5406 37.4561 10.3938 37.2394 10.3938 36.9796 10.5437 36.8755 10.6925 36.7714 10.9289 36.865 11.0793 37.0801 11.2257 37.3004 11.2257 37.5602 11.0757 37.6663M12.3697 39.0219C12.2384 39.1692 11.9588 39.1297 11.7541 38.9287 11.5446 38.7322 11.4863 38.4534 11.618 38.3062 11.7509 38.1585 12.0321 38.2001 12.2384 38.3994 12.4463 38.5955 12.5098 38.8763 12.3697 39.0219M14.1548 39.8091C14.0969 40 13.8276 40.0867 13.5562 40.0056 13.2853 39.9221 13.108 39.6986 13.1627 39.5057 13.219 39.3137 13.4896 39.2233 13.7629 39.31 14.0334 39.3932 14.2112 39.6151 14.1548 39.8091M16.1153 39.9552C16.122 40.1561 15.892 40.3228 15.6071 40.3264 15.3207 40.3329 15.089 40.1703 15.0859 39.9726 15.0859 39.7696 15.3108 39.6046 15.5972 39.5998 15.882 39.5941 16.1153 39.7555 16.1153 39.9552M17.9397 39.6392C17.9738 39.8353 17.7759 40.0366 17.493 40.0903 17.2149 40.1419 16.9575 40.0209 16.9222 39.8264 16.8877 39.6255 17.0892 39.4241 17.3669 39.3721 17.6501 39.3221 17.9036 39.4399 17.9397 39.6392"></path></svg>GITHUB
+        </p>
+    </a></div>
+       
+        <div>  <a href="https://www.facebook.com/profile.php?id=61552679773821&sk=reels_tab" target="_blank">
+            <p class="para">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" viewBox="0 0 16 16" id="facebook"><path fill="#1976D2" d="M14 0H2C.897 0 0 .897 0 2v12c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V2c0-1.103-.897-2-2-2z"></path><path fill="#FAFAFA" fill-rule="evenodd" d="M13.5 8H11V6c0-.552.448-.5 1-.5h1V3h-2a3 3 0 0 0-3 3v2H6v2.5h2V16h3v-5.5h1.5l1-2.5z" clip-rule="evenodd"></path></svg>FACEBOOK
+            </p>
+        </a></div>
+      
+        <div>  <a href="https://drive.google.com/drive/folders/1GPpunFE-z7n7Oc0yc166qO781pknNZ2r?usp=drive_link">
+            <P class="para">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="42" viewBox="0 0 48 42" id="drive"><g fill="none" fill-rule="evenodd"><g transform="translate(-601 -955)"><g transform="translate(601 955)"><path fill="#3777E3" d="M8 42l8-14h32l-8 14z"></path><path fill="#FFCF63" d="M32 28h16L32 0H16z"></path><path fill="#11A861" d="M0 28l8 14 16-28-8-14z"></path></g></g></g></svg>DRIVE
+            </P>
+        </a></div>
+      
+        <div><a href="https://twitter.com/RechalShiny" target="_blank">
+            <p class="para">
+                <svg width="48" xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 512 512" id="twitter"><g clip-path="url(#clip0_84_15697)"><rect width="512" height="512" fill="#000" rx="60"></rect><path fill="#fff" d="M355.904 100H408.832L293.2 232.16L429.232 412H322.72L239.296 302.928L143.84 412H90.8805L214.56 270.64L84.0645 100H193.28L268.688 199.696L355.904 100ZM337.328 380.32H366.656L177.344 130.016H145.872L337.328 380.32Z"></path></g><defs><clipPath id="clip0_84_15697"><rect width="512" height="512" fill="#fff"></rect></clipPath></defs></svg>X
+            </p>
+        </a></div>
+        
+    </div>
+</div>
+<div class="hello" id="hrr">
+    <div class="card" >
+        <img src="vi.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">VIDEO EDITING</h5>
+          <p class="card-text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20%" enable-background="new 0 0 512 512" version="1" viewBox="0 0 512 512" id="adobe-premiere-pro"><path fill="#E586FF" d="M93.867,12.801h324.267c51.733,0,93.867,42.133,93.867,93.867v311.467
+              c0,51.733-42.133,93.867-93.867,93.867H93.867c-51.733,0-93.867-42.133-93.867-93.867V106.668
+              C0.001,54.934,42.134,12.801,93.867,12.801"></path><path fill="#210027" d="M98.133,34.134h315.733c42.667,0,76.8,34.133,76.8,76.8v302.933c0,42.667-34.133,76.8-76.8,76.8H98.133
+              c-42.667,0-76.8-34.133-76.8-76.8V110.934C21.333,68.268,55.466,34.134,98.133,34.134"></path><g><path fill="#FFF" d="M129.061,148.185c0-1.693,0-2.539,1.693-2.539c13.542-0.846,33.854-0.846,54.166-0.846
+              c58.187,0,83.789,32.161,83.789,73.632c0,54.166-38.932,77.018-86.328,77.018h-15.869v81.25c0.19,1.212-0.638,2.349-1.851,2.539
+              c-0.228,0.036-0.46,0.036-0.688,0H131.6c-1.212,0.19-2.349-0.638-2.539-1.851c-0.036-0.228-0.036-0.46,0-0.688V148.185z
+               M167.147,260.75h16.927c24.544,0,48.242-8.463,48.242-42.317c0-27.083-16.927-40.625-44.857-40.625
+              c-6.782-0.241-13.573,0.042-20.312,0.846V260.75z M302.563,241.284c0-2.539,0-8.463-0.846-20.312c0-1.693,0-1.693,1.693-2.539
+              c24.593-9.407,50.687-14.282,77.018-14.388c1.693,0,2.539,0,2.539,1.693v30.469c0,1.693-0.846,1.693-2.539,1.693
+              c-13.401-0.735-26.832,0.694-39.778,4.232v132.877c0.19,1.212-0.638,2.349-1.851,2.539c-0.228,0.036-0.46,0.036-0.688,0h-33.008
+              c-1.212,0.19-2.349-0.638-2.539-1.851c-0.036-0.228-0.036-0.46,0-0.688V241.284z"></path><path fill="#E889FF" d="M129.061,148.185c0-1.693,0-2.539,1.693-2.539c13.542-0.846,33.854-0.846,54.166-0.846
+                c58.187,0,83.789,32.161,83.789,73.632c0,54.166-38.932,77.018-86.328,77.018h-15.869v81.25c0.19,1.212-0.638,2.349-1.851,2.539
+                c-0.228,0.036-0.46,0.036-0.688,0H131.6c-1.212,0.19-2.349-0.638-2.539-1.851c-0.036-0.228-0.036-0.46,0-0.688V148.185z
+                 M167.147,260.75h16.927c24.544,0,48.242-8.463,48.242-42.317c0-27.083-16.927-40.625-44.857-40.625
+                c-6.782-0.241-13.573,0.042-20.312,0.846V260.75z M302.563,241.284c0-2.539,0-8.463-0.846-20.312c0-1.693,0-1.693,1.693-2.539
+                c24.593-9.407,50.687-14.282,77.018-14.388c1.693,0,2.539,0,2.539,1.693v30.469c0,1.693-0.846,1.693-2.539,1.693
+                c-13.401-0.735-26.832,0.694-39.778,4.232v132.877c0.19,1.212-0.638,2.349-1.851,2.539c-0.228,0.036-0.46,0.036-0.688,0h-33.008
+                c-1.212,0.19-2.349-0.638-2.539-1.851c-0.036-0.228-0.036-0.46,0-0.688V241.284z" opacity=".15"></path></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 512 512" version="1" viewBox="0 0 512 512" id="adobe-after-effects" width="20%"><path fill="#D291FF" d="M93.867,12.801h324.267c51.733,0,93.867,42.133,93.867,93.867v311.467
+                  c0,51.733-42.133,93.867-93.867,93.867H93.867c-51.733,0-93.867-42.133-93.867-93.867V106.668
+                  C0.001,54.934,42.134,12.801,93.867,12.801"></path><path fill="#1F0040" d="M98.133,34.134h315.733c42.667,0,76.8,34.133,76.8,76.8v302.933c0,42.667-34.133,76.8-76.8,76.8H98.133
+                  c-42.667,0-76.8-34.133-76.8-76.8V110.934C21.333,68.268,55.466,34.134,98.133,34.134"></path><g><path fill="#FFF" d="M148.877,312.465l-16.978,63.666c0,1.698-0.849,2.547-3.396,2.547H97.095
+                  c-1.698,0-2.547-0.849-1.698-3.396l60.27-210.522c1.325-5.557,1.896-11.268,1.698-16.978c0-1.698,0.849-1.698,1.698-1.698
+                  l44.142,0c1.698,0,1.698,0,2.547,1.698l67.91,228.137c0,1.698,0,2.547-1.698,2.547h-34.804c-1.33-0.024-2.578-0.648-3.396-1.698
+                  l-16.978-64.303L148.877,312.465z M208.299,278.51c-5.942-23.769-20.373-74.701-25.466-100.168l0,0
+                  c-4.244,24.618-15.917,67.062-24.618,100.168L208.299,278.51z M322.049,299.732c0,28.862,14.431,48.386,45.84,48.386
+                  c11.893,0.351,23.714-1.97,34.592-6.791c1.698-0.849,2.547,0,2.547,1.698v26.527c-0.031,1.574-0.634,3.083-1.698,4.244
+                  c-11.035,5.942-25.466,7.64-42.444,7.64c-56.026,0-77.248-41.595-77.248-87.435c0-50.084,26.528-90.83,71.306-90.83
+                  c45.84,0,61.968,39.048,61.968,70.457c0.154,7.395-0.415,14.787-1.698,22.071c-0.054,1.149-0.973,2.069-2.122,2.122
+                  c-11.829,1.408-23.743,1.976-35.653,1.698L322.049,299.732z M365.341,270.87h15.917v-3.396c0-12.097-5.73-33.319-27.801-33.319
+                  c-20.373,0-28.862,17.826-31.409,36.502L365.341,270.87z"></path><path fill="#D291FF" d="M148.877,312.465l-16.978,63.666c0,1.698-0.849,2.547-3.396,2.547H97.095
+                    c-1.698,0-2.547-0.849-1.698-3.396l60.27-210.522c1.325-5.557,1.896-11.268,1.698-16.978c0-1.698,0.849-1.698,1.698-1.698
+                    l44.142,0c1.698,0,1.698,0,2.547,1.698l67.91,228.137c0,1.698,0,2.547-1.698,2.547h-34.804c-1.33-0.024-2.578-0.648-3.396-1.698
+                    l-16.978-64.303L148.877,312.465z M208.299,278.51c-5.942-23.769-20.373-74.701-25.466-100.168l0,0
+                    c-4.244,24.618-15.917,67.062-24.618,100.168L208.299,278.51z M322.049,299.732c0,28.862,14.431,48.386,45.84,48.386
+                    c11.893,0.351,23.714-1.97,34.592-6.791c1.698-0.849,2.547,0,2.547,1.698v26.527c-0.031,1.574-0.634,3.083-1.698,4.244
+                    c-11.035,5.942-25.466,7.64-42.444,7.64c-56.026,0-77.248-41.595-77.248-87.435c0-50.084,26.528-90.83,71.306-90.83
+                    c45.84,0,61.968,39.048,61.968,70.457c0.154,7.395-0.415,14.787-1.698,22.071c-0.054,1.149-0.973,2.069-2.122,2.122
+                    c-11.829,1.408-23.743,1.976-35.653,1.698L322.049,299.732z M365.341,270.87h15.917v-3.396c0-12.097-5.73-33.319-27.801-33.319
+                    c-20.373,0-28.862,17.826-31.409,36.502L365.341,270.87z" opacity=".15"></path></g></svg>
+            
+                    <svg xmlns="http://www.w3.org/2000/svg"  width="15%" enable-background="new 0 0 60 60" viewBox="0 0 60 60" id="capcut"><path fill="#fff" d="M50,60H10C4.477,60,0,55.523,0,50V10C0,4.477,4.477,0,10,0h40c5.523,0,10,4.477,10,10v40
+                      C60,55.523,55.523,60,50,60z"></path><g><path fill="#827399" d="M26 49.002c-6.045 0-12.174-.682-18.217-2.026-.359-.08-.646-.351-.746-.706-.587-2.09-1.072-4.24-1.442-6.391-.094-.544.271-1.062.815-1.155.545-.099 1.062.271 1.155.815.325 1.886.741 3.771 1.238 5.612 11.421 2.455 22.972 2.455 34.393 0 .498-1.841.914-3.726 1.238-5.612.093-.544.605-.915 1.155-.815.544.094.909.611.815 1.155-.37 2.151-.855 4.301-1.442 6.391-.1.354-.386.625-.746.706C38.174 48.321 32.045 49.002 26 49.002zM45.419 21.29c-.478 0-.901-.343-.984-.83-.325-1.886-.741-3.771-1.238-5.612-2.311-.497-4.646-.898-6.952-1.194-.547-.07-.935-.571-.864-1.119.07-.548.569-.94 1.119-.864 2.56.328 5.157.784 7.718 1.353.359.08.646.351.746.706.587 2.09 1.072 4.24 1.442 6.391.094.544-.271 1.062-.815 1.155C45.532 21.286 45.475 21.29 45.419 21.29zM6.581 21.29c-.056 0-.113-.004-.171-.015-.544-.094-.909-.611-.815-1.155.37-2.151.855-4.301 1.442-6.391.1-.354.386-.625.746-.706 8.188-1.822 16.485-2.418 24.69-1.771.551.043.962.525.918 1.076-.043.551-.522.957-1.076.918-7.812-.617-15.705-.078-23.512 1.6-.498 1.841-.914 3.726-1.238 5.612C7.482 20.947 7.059 21.29 6.581 21.29z"></path><path fill="#827399" d="M55.999,46c-0.15,0-0.303-0.034-0.446-0.105l-49.42-24.71c-0.494-0.247-0.694-0.848-0.447-1.342
+                      c0.247-0.494,0.847-0.694,1.342-0.447l49.42,24.71c0.494,0.247,0.694,0.848,0.447,1.342C56.719,45.798,56.366,46,55.999,46z"></path><path fill="#827399" d="M6.581,40.71c-0.367,0-0.72-0.202-0.896-0.553c-0.247-0.494-0.047-1.095,0.447-1.342l49.42-24.71
+                      c0.496-0.247,1.095-0.046,1.342,0.447c0.247,0.494,0.047,1.095-0.447,1.342l-49.42,24.71C6.884,40.676,6.731,40.71,6.581,40.71z"></path><path fill="#c3b5de" d="M9.953 18.623c.146-.693.304-1.383.475-2.069 5.18-1.033 10.41-1.556 15.572-1.556s10.392.523 15.572 1.556c.17.686.329 1.376.475 2.069L26 26.646 9.953 18.623zM26 45.002c-5.163 0-10.392-.523-15.572-1.556-.17-.686-.329-1.376-.475-2.069L26 33.354l16.047 8.023c-.146.693-.304 1.383-.475 2.069C36.392 44.479 31.163 45.002 26 45.002z"></path></g></svg>
+
+
+
+
+
+
+          </p>
+          <a href="#video" class="btn btn-primary">Go</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="pro.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">PROGRAMMING AND WEB DEVELOPMENT</h5>
+          <p class="card-text">
+<svg xmlns="http://www.w3.org/2000/svg" width="20%" viewBox="0 0 128 128" id="java"><path fill="#0074BD" d="M52.581 67.817s-3.284 1.911 2.341 2.557c6.814.778 10.297.666 17.805-.753 0 0 1.979 1.237 4.735 2.309-16.836 7.213-38.104-.418-24.881-4.113zM50.522 58.402s-3.684 2.729 1.945 3.311c7.28.751 13.027.813 22.979-1.103 0 0 1.373 1.396 3.536 2.157-20.352 5.954-43.021.469-28.46-4.365z"></path><path fill="#EA2D2E" d="M67.865 42.431c4.151 4.778-1.088 9.074-1.088 9.074s10.533-5.437 5.696-12.248c-4.519-6.349-7.982-9.502 10.771-20.378.001 0-29.438 7.35-15.379 23.552z"></path><path fill="#0074BD" d="M90.132 74.781s2.432 2.005-2.678 3.555c-9.716 2.943-40.444 3.831-48.979.117-3.066-1.335 2.687-3.187 4.496-3.576 1.887-.409 2.965-.334 2.965-.334-3.412-2.403-22.055 4.719-9.469 6.762 34.324 5.563 62.567-2.506 53.665-6.524zM54.162 48.647s-15.629 3.713-5.534 5.063c4.264.57 12.758.439 20.676-.225 6.469-.543 12.961-1.704 12.961-1.704s-2.279.978-3.93 2.104c-15.874 4.175-46.533 2.23-37.706-2.038 7.463-3.611 13.533-3.2 13.533-3.2zM82.2 64.317c16.135-8.382 8.674-16.438 3.467-15.353-1.273.266-1.845.496-1.845.496s.475-.744 1.378-1.063c10.302-3.62 18.223 10.681-3.322 16.345 0 0 .247-.224.322-.425z"></path><path fill="#EA2D2E" d="M72.474 1.313s8.935 8.939-8.476 22.682c-13.962 11.027-3.184 17.313-.006 24.498-8.15-7.354-14.128-13.828-10.118-19.852 5.889-8.842 22.204-13.131 18.6-27.328z"></path><path fill="#0074BD" d="M55.749 87.039c15.484.99 39.269-.551 39.832-7.878 0 0-1.082 2.777-12.799 4.981-13.218 2.488-29.523 2.199-39.191.603 0 0 1.98 1.64 12.158 2.294z"></path><path fill="#EA2D2E" d="M94.866 100.181h-.472v-.264h1.27v.264h-.47v1.317h-.329l.001-1.317zm2.535.066h-.006l-.468 1.251h-.216l-.465-1.251h-.005v1.251h-.312v-1.581h.457l.431 1.119.432-1.119h.454v1.581h-.302v-1.251zM53.211 115.037c-1.46 1.266-3.004 1.978-4.391 1.978-1.974 0-3.045-1.186-3.045-3.085 0-2.055 1.146-3.56 5.738-3.56h1.697v4.667h.001zm4.031 4.548v-14.077c0-3.599-2.053-5.973-6.997-5.973-2.886 0-5.416.714-7.473 1.622l.592 2.493c1.62-.595 3.715-1.147 5.771-1.147 2.85 0 4.075 1.147 4.075 3.521v1.779h-1.424c-6.921 0-10.044 2.685-10.044 6.723 0 3.479 2.058 5.456 5.933 5.456 2.49 0 4.351-1.028 6.088-2.533l.316 2.137h3.163v-.001zM70.694 119.585h-5.027l-6.051-19.689h4.391l3.756 12.099.835 3.635c1.896-5.258 3.24-10.596 3.912-15.733h4.271c-1.143 6.481-3.203 13.598-6.087 19.688zM89.982 115.037c-1.465 1.266-3.01 1.978-4.392 1.978-1.976 0-3.046-1.186-3.046-3.085 0-2.055 1.149-3.56 5.736-3.56h1.701v4.667h.001zm4.033 4.548v-14.077c0-3.599-2.059-5.973-6.999-5.973-2.889 0-5.418.714-7.475 1.622l.593 2.493c1.62-.595 3.718-1.147 5.774-1.147 2.846 0 4.074 1.147 4.074 3.521v1.779h-1.424c-6.923 0-10.045 2.685-10.045 6.723 0 3.479 2.056 5.456 5.93 5.456 2.491 0 4.349-1.028 6.091-2.533l.318 2.137h3.163v-.001zM37.322 122.931c-1.147 1.679-3.005 3.008-5.037 3.757l-1.989-2.345c1.547-.794 2.872-2.075 3.489-3.269.532-1.063.753-2.43.753-5.701v-22.482h4.284v22.173c0 4.375-.348 6.144-1.5 7.867z"></path></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="20%"  enable-background="new 0 0 24 24" viewBox="0 0 24 24" id="python"><path fill="#F2BB30" d="M20.699,17.748c1.666,0,2.282-1.162,2.86-2.904c0.6-1.795,0.574-3.52,0-5.818c-0.413-1.655-1.194-2.904-2.86-2.904h-2.148v2.54c0,1.972-1.672,3.633-3.579,3.633H9.252c-1.564,0-2.86,1.339-2.86,2.908v5.454c0,1.553,1.35,2.464,2.86,2.908c1.811,0.53,3.552,0.626,5.721,0c1.441-0.418,2.861-1.26,2.861-2.908v-2.181h-5.717v-0.729H20.699L20.699,17.748z"></path><path fill="#35668F" d="M3.444,17.749H5.41v-2.614c0-1.892,1.634-3.557,3.579-3.557h5.721c1.591,0,2.86-1.312,2.86-2.909V3.209c0-1.554-1.307-2.717-2.86-2.979c-1.918-0.316-4.002-0.3-5.721,0.006l0.001-0.001C6.568,0.663,6.129,1.558,6.129,3.213v2.18h5.727v0.73H3.98c-1.667,0-3.124,1.002-3.578,2.905c-0.525,2.18-0.547,3.54,0,5.818C0.808,16.538,1.779,17.749,3.444,17.749L3.444,17.749z"></path><path fill="#D3A32A" d="M12,12.295H9.252c-1.564,0-2.86,1.339-2.86,2.908v5.454c0,1.553,1.35,2.464,2.86,2.908c0.912,0.267,1.807,0.424,2.748,0.434V12.295L12,12.295z"></path><path fill="#2E597C" d="M11.827,0c-0.994,0-1.964,0.081-2.839,0.236l0.001-0.001C6.568,0.663,6.129,1.558,6.129,3.213v2.18h5.727v0.73H3.98c-1.667,0-3.124,1.002-3.578,2.905c-0.26,1.081-0.397,1.961-0.402,2.85v0.101c0.005,0.872,0.136,1.761,0.402,2.867c0.406,1.692,1.377,2.903,3.042,2.903H5.41v-2.614c0-1.892,1.634-3.557,3.579-3.557H12V0.001C11.942,0,11.885,0,11.827,0L11.827,0z"></path><polygon fill="#FFF" points="18.231 7.357 18.232 7.357 18.232 7.353"></polygon><path fill="#FFF" d="M15.332 19.929c.594 0 1.077.488 1.077 1.088 0 .606-.482 1.093-1.077 1.093-.59 0-1.077-.493-1.077-1.093C14.261 20.411 14.744 19.929 15.332 19.929zM8.63 3.936c-.594 0-1.076-.488-1.076-1.088C7.56 2.243 8.036 1.756 8.63 1.756c.59 0 1.077.493 1.077 1.093C9.707 3.448 9.225 3.936 8.63 3.936L8.63 3.936z"></path><path fill="#DEDEDE" d="M8.63 1.756c-.594 0-1.071.487-1.076 1.093 0 .6.482 1.088 1.076 1.088l0 0V1.756L8.63 1.756 8.63 1.756zM15.332 19.929c-.594 0-1.071.487-1.076 1.093 0 .6.482 1.088 1.076 1.088l0 0V19.929L15.332 19.929 15.332 19.929z"></path></svg>        
+  <svg xmlns="http://www.w3.org/2000/svg" width="20%" viewBox="0 0 128 128" id="c"><path fill="#03599C" d="M117.5 33.5l.3-.2c-.6-1.1-1.5-2.1-2.4-2.6l-48.3-27.8c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.3.9 3.4l-.2.1c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4v-55.8c.1-.8 0-1.7-.4-2.6zm-53.5 55c9.1 0 17.1-5 21.3-12.4l12.9 7.6c-6.8 11.8-19.6 19.8-34.2 19.8-21.8 0-39.5-17.7-39.5-39.5s17.7-39.5 39.5-39.5c14.7 0 27.5 8.1 34.3 20l-13 7.5c-4.2-7.5-12.2-12.5-21.3-12.5-13.5 0-24.5 11-24.5 24.5s11 24.5 24.5 24.5z"></path></svg>
+
+</p>
+          <a href="#prooo" class="btn btn-primary">Go</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="word.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">WORD PRESS</h5>
+          <p class="card-text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20%" height="48" id="wordpress"><path fill="#00759D" fill-rule="evenodd" d="M0 24c0 9.499 5.52 17.709 13.526 21.598L2.078 14.232A23.917 23.917 0 0 0 0 24zm40.202-1.211c0-2.967-1.067-5.02-1.979-6.618-1.217-1.98-2.358-3.653-2.358-5.63 0-2.207 1.672-4.26 4.03-4.26.107 0 .208.013.311.02A23.909 23.909 0 0 0 24 0C15.614 0 8.239 4.302 3.947 10.817a49.81 49.81 0 0 0 1.545.028c2.51 0 6.396-.304 6.396-.304 1.293-.077 1.446 1.825.153 1.977 0 0-1.3.153-2.746.23l8.739 25.995 5.253-15.752-3.738-10.244a43.428 43.428 0 0 1-2.519-.23c-1.293-.076-1.141-2.053.153-1.976 0 0 3.963.304 6.322.304 2.51 0 6.396-.304 6.396-.304 1.294-.077 1.446 1.825.153 1.977 0 0-1.302.153-2.747.23l8.673 25.797 2.396-7.998c1.035-3.321 1.826-5.705 1.826-7.758zm4.858-10.304c.103.765.162 1.584.162 2.468 0 2.434-.456 5.172-1.826 8.597l-7.33 21.194C43.2 40.584 48 32.853 48 24c0-4.173-1.067-8.096-2.94-11.515zM24.42 26.1l-7.202 20.924c2.151.633 4.425.978 6.78.978 2.795 0 5.476-.483 7.97-1.36a2.28 2.28 0 0 1-.17-.33L24.42 26.1z"></path></svg>
+          </p>
+          <a href="#word" class="btn btn-primary">Go</a>
+        </div>
+      </div>
+</div>
+
+
+
+
+
+
+<div  id="video">
+    <div>
+        <h1 class="text-white title " style="text-shadow: 1px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+        1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff; text-align:center;font-size:6vw">VIDEO EDITING </h1>
+        
+    </div>
+    <div>
+        <p class="para">Editing is my playground, where ideas come to life with a touch of magic. I love the art of expressing thoughts in a clear and captivating way. Armed with Adobe Premiere Pro, After Effects, and CapCut, I sculpt raw footage into a masterpiece, ensuring every frame tells a compelling story. Let's turn your vision into a visual delight! Full videos are available in drive.
+        </p>
+        
+<div  class="re">  <a href="https://drive.google.com/drive/folders/1GPpunFE-z7n7Oc0yc166qO781pknNZ2r?usp=drive_link">
+            <P class="para">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="42" viewBox="0 0 48 42" id="drive"><g fill="none" fill-rule="evenodd"><g transform="translate(-601 -955)"><g transform="translate(601 955)"><path fill="#3777E3" d="M8 42l8-14h32l-8 14z"></path><path fill="#FFCF63" d="M32 28h16L32 0H16z"></path><path fill="#11A861" d="M0 28l8 14 16-28-8-14z"></path></g></g></g></svg>DRIVE
+            </P>
+        </a></div>
+        <div style="margin: 20px;">
+        
+                <img src="shine.png"width="30%" class="e" >
+        
+        
+                <img src="pre.png" width="30%" class="e">
+        
+        
+                <img src="r3.png" width="30%" class="e" >
+        
+        </div>
+    </div>
+
+</div>
+
+<div  id="prooo">
+    <div>
+        <h1 class="text-white title " style="text-shadow: 1px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+        1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff; text-align:center;font-size:6vw">WEB PAGES</h1>
+        
+    </div>
+    <div>
+        <p class="para">Hello world! 👋 I'm Tadem, and I'm all about web development. I speak the language of coding to bring websites to life. From HTML to CSS and beyond, I thrive on turning ideas into interactive and functional online experiences. Let's build something awesome together! they all are available in my github.
+        </p>
+
+ <div  class="re"> <a href="https://github.com/shine2024" target="_blank">
+        <p class="para">
+            <svg  xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48" id="github"><path fill="#fff" d="M24.0002 0C10.747 0 0 11.0169 0 24.6076C0 35.4799 6.87679 44.7039 16.4128 47.9577C17.6123 48.1855 18.0526 47.4239 18.0526 46.7739C18.0526 46.1872 18.0304 44.2487 18.02 42.1925C11.3431 43.6811 9.93424 39.2891 9.93424 39.2891C8.84249 36.4448 7.26945 35.6885 7.26945 35.6885C5.09191 34.1613 7.43359 34.1926 7.43359 34.1926C9.84363 34.3662 11.1126 36.7285 11.1126 36.7285C13.2532 40.4904 16.7272 39.4028 18.0967 38.7741C18.3121 37.1836 18.9341 36.0981 19.6205 35.4836C14.2897 34.8613 8.6859 32.7513 8.6859 23.3224C8.6859 20.6358 9.62345 18.4406 11.1587 16.7174C10.9095 16.0976 10.088 13.5947 11.3912 10.2052C11.3912 10.2052 13.4066 9.54386 17.993 12.7276C19.9074 12.1824 21.9606 11.9089 24.0002 11.8996C26.0398 11.9089 28.0946 12.1824 30.0126 12.7276C34.5934 9.54386 36.606 10.2052 36.606 10.2052C37.9124 13.5947 37.0905 16.0976 36.8413 16.7174C38.3801 18.4406 39.3113 20.6358 39.3113 23.3224C39.3113 32.7737 33.6968 34.8548 28.3525 35.464C29.2133 36.2276 29.9804 37.7252 29.9804 40.021C29.9804 43.3135 29.9526 45.9634 29.9526 46.7739C29.9526 47.4288 30.3846 48.1961 31.6011 47.9544C41.132 44.697 48 35.4762 48 24.6076C48 11.0169 37.2546 0 24.0002 0"></path><path fill="#161514" d="M9.16085 35.1623C9.10809 35.2833 8.92085 35.3196 8.75027 35.2365 8.57652 35.157 8.47893 34.992 8.53526 34.8706 8.58683 34.7459 8.77447 34.7112 8.94782 34.7947 9.12197 34.8742 9.22115 35.0408 9.16085 35.1623M10.1312 36.263C10.0169 36.3707 9.79358 36.3207 9.64205 36.1504 9.48535 35.9806 9.456 35.7534 9.57183 35.6441 9.68965 35.5363 9.90624 35.5868 10.0633 35.7566 10.22 35.9285 10.2506 36.1541 10.1312 36.263M11.0757 37.6663C10.9289 37.77 10.6889 37.6728 10.5406 37.4561 10.3938 37.2394 10.3938 36.9796 10.5437 36.8755 10.6925 36.7714 10.9289 36.865 11.0793 37.0801 11.2257 37.3004 11.2257 37.5602 11.0757 37.6663M12.3697 39.0219C12.2384 39.1692 11.9588 39.1297 11.7541 38.9287 11.5446 38.7322 11.4863 38.4534 11.618 38.3062 11.7509 38.1585 12.0321 38.2001 12.2384 38.3994 12.4463 38.5955 12.5098 38.8763 12.3697 39.0219M14.1548 39.8091C14.0969 40 13.8276 40.0867 13.5562 40.0056 13.2853 39.9221 13.108 39.6986 13.1627 39.5057 13.219 39.3137 13.4896 39.2233 13.7629 39.31 14.0334 39.3932 14.2112 39.6151 14.1548 39.8091M16.1153 39.9552C16.122 40.1561 15.892 40.3228 15.6071 40.3264 15.3207 40.3329 15.089 40.1703 15.0859 39.9726 15.0859 39.7696 15.3108 39.6046 15.5972 39.5998 15.882 39.5941 16.1153 39.7555 16.1153 39.9552M17.9397 39.6392C17.9738 39.8353 17.7759 40.0366 17.493 40.0903 17.2149 40.1419 16.9575 40.0209 16.9222 39.8264 16.8877 39.6255 17.0892 39.4241 17.3669 39.3721 17.6501 39.3221 17.9036 39.4399 17.9397 39.6392"></path></svg>GITHUB
+        </p>
+    </a></div>
+    </div>
+
+
+    <div class="hello">
+        <div class="card" >
+            <img src="protfolio.PNG" width="100%" >
+            <div class="card-body">
+              
+              <p class="card-text">
+                My portfolio is like a showcase of my coolest stuff. It's a mix of coding projects and awesome edits I've whipped up. Whether it's making programs or giving videos that extra oomph, it's all here. Come take a peek into my world where tech meets creativity!
+              </p>
+              <a href="#video" class="btn btn-primary">Go</a>
+            </div>
+          </div>
+          <div class="card">
+              <img src="livenup.PNG" width="100%">
+            <div class="card-body">
+              
+              <p class="card-text">
+                Hey folks! 👷‍♂️ I'm Tadem, and I've been hard at work with HTML, CSS, and JS. Recently, I crafted a project that brought a dash of life to Enlivens Company. The code is the backbone, the styling adds the flair, and JavaScript makes it dance.
+    </p>
+              <a href="#" class="btn btn-primary">Go</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="dice.PNG" width="100%" >
+          
+            <div class="card-body">
+              
+              <p class="card-text">
+                A basic dice game using the magic of HTML and CSS. It's simple yet exciting.
+              </p>
+              <a href="https://shine2024.github.io/DiceGame/" class="btn btn-primary">Go</a>
+            </div>
+          </div>
+    </div>
+</div>
+
+
+
+<div  id="word">
+    <div>
+        <h1 class="text-white title " style="text-shadow: 1px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+        1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff; text-align:center;font-size:6vw">WORDPRESS SITES</h1>
+        
+    </div>
+    <div>
+        <p class="para">Hey everyone! 🌟 I'm Tadem, and I'm proud to say I'm a WordPress wizard. I've woven my magic to create awesome WordPress sites that not only look good but work seamlessly. From themes to plugins, I've got the tools to make your online presence shine. Let's chat about how I can bring your ideas to the web!
+        </p>
+    </div>
+
+
+    <div class="hello">
+        <div class="card" >
+            <img src="collking.PNG" width="100%">
+            <div class="card-body">
+              
+              <p class="card-text">
+                Hey there! 👋 Step into CollectionKing's world of beautiful Lehengas. Our new online store is your go-to for all things stunning and stylish. Browse, shop, and let the fashion magic begin! Happy exploring.
+              </p>
+              <a href="http://collectionking.great-site.net/?i=1" class="btn btn-primary">Go</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="construction.PNG" width="100%">
+            <div class="card-body">
+              
+              <p class="card-text">
+                🏗️ Welcome to Enlivens, where craftsmanship meets construction excellence! Explore our world of sturdy foundations and architectural wonders. Dive into our project collection, a showcase of passion and precision in every build. 
+    </p>
+              <a href="http://tademrechalshiny.rf.gd/" class="btn btn-primary" >Go</a>
+            </div>
+          </div>
+          
+    </div>
+</div>
+
+
+
+
+
+<div  style="margin: 2rem;">
+    
+    <div class="connect" id="connect" >
+        <h2>Connect with me:</h2>
+        <div> <a href="https://www.youtube.com/channel/UCILD985x_dfyFtTzSm2HYNg" target="_blank">
+            <p class="para">
+                <svg width="48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="youtube"><g fill-rule="evenodd" clip-rule="evenodd"><path fill="#F44336" d="M15.32 4.06c-.434-.772-.905-.914-1.864-.968C12.498 3.027 10.089 3 8.002 3c-2.091 0-4.501.027-5.458.091-.957.055-1.429.196-1.867.969C.23 4.831 0 6.159 0 8.497v.008c0 2.328.23 3.666.677 4.429.438.772.909.912 1.866.977.958.056 3.368.089 5.459.089 2.087 0 4.496-.033 5.455-.088.959-.065 1.43-.205 1.864-.977.451-.763.679-2.101.679-4.429v-.008c0-2.339-.228-3.667-.68-4.438z"></path><path fill="#FAFAFA" d="M6 11.5v-6l5 3z" ></path></g></svg> YOU TUBE
+            </p>
+        </a></div>
+       
+        <div><a href="https://www.instagram.com/rechal_and_shiny/" target="_blank">
+            <p class="para">
+                <svg width="48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="instagram"><linearGradient id="a" x1="1.464" x2="14.536" y1="14.536" y2="1.464" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFC107"></stop><stop offset=".507" stop-color="#F44336"></stop><stop offset=".99" stop-color="#9C27B0"></stop></linearGradient><path fill="url(#a)" d="M11 0H5a5 5 0 0 0-5 5v6a5 5 0 0 0 5 5h6a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zm3.5 11c0 1.93-1.57 3.5-3.5 3.5H5c-1.93 0-3.5-1.57-3.5-3.5V5c0-1.93 1.57-3.5 3.5-3.5h6c1.93 0 3.5 1.57 3.5 3.5v6z"></path><linearGradient id="b" x1="5.172" x2="10.828" y1="10.828" y2="5.172" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFC107"></stop><stop offset=".507" stop-color="#F44336"></stop><stop offset=".99" stop-color="#9C27B0"></stop></linearGradient><path fill="url(#b)" d="M8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0 6.5A2.503 2.503 0 0 1 5.5 8c0-1.379 1.122-2.5 2.5-2.5s2.5 1.121 2.5 2.5c0 1.378-1.122 2.5-2.5 2.5z"></path><linearGradient id="c" x1="11.923" x2="12.677" y1="4.077" y2="3.323" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFC107"></stop><stop offset=".507" stop-color="#F44336"></stop><stop offset=".99" stop-color="#9C27B0"></stop></linearGradient><circle cx="12.3" cy="3.7" r=".533" fill="url(#c)"></circle></svg>INSTAGRAM
+            </p>
+        </a></div>
+        
+       <div > <a href="https://github.com/shine2024" target="_blank">
+        <p class="para">
+            <svg  xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48" id="github"><path fill="#fff" d="M24.0002 0C10.747 0 0 11.0169 0 24.6076C0 35.4799 6.87679 44.7039 16.4128 47.9577C17.6123 48.1855 18.0526 47.4239 18.0526 46.7739C18.0526 46.1872 18.0304 44.2487 18.02 42.1925C11.3431 43.6811 9.93424 39.2891 9.93424 39.2891C8.84249 36.4448 7.26945 35.6885 7.26945 35.6885C5.09191 34.1613 7.43359 34.1926 7.43359 34.1926C9.84363 34.3662 11.1126 36.7285 11.1126 36.7285C13.2532 40.4904 16.7272 39.4028 18.0967 38.7741C18.3121 37.1836 18.9341 36.0981 19.6205 35.4836C14.2897 34.8613 8.6859 32.7513 8.6859 23.3224C8.6859 20.6358 9.62345 18.4406 11.1587 16.7174C10.9095 16.0976 10.088 13.5947 11.3912 10.2052C11.3912 10.2052 13.4066 9.54386 17.993 12.7276C19.9074 12.1824 21.9606 11.9089 24.0002 11.8996C26.0398 11.9089 28.0946 12.1824 30.0126 12.7276C34.5934 9.54386 36.606 10.2052 36.606 10.2052C37.9124 13.5947 37.0905 16.0976 36.8413 16.7174C38.3801 18.4406 39.3113 20.6358 39.3113 23.3224C39.3113 32.7737 33.6968 34.8548 28.3525 35.464C29.2133 36.2276 29.9804 37.7252 29.9804 40.021C29.9804 43.3135 29.9526 45.9634 29.9526 46.7739C29.9526 47.4288 30.3846 48.1961 31.6011 47.9544C41.132 44.697 48 35.4762 48 24.6076C48 11.0169 37.2546 0 24.0002 0"></path><path fill="#161514" d="M9.16085 35.1623C9.10809 35.2833 8.92085 35.3196 8.75027 35.2365 8.57652 35.157 8.47893 34.992 8.53526 34.8706 8.58683 34.7459 8.77447 34.7112 8.94782 34.7947 9.12197 34.8742 9.22115 35.0408 9.16085 35.1623M10.1312 36.263C10.0169 36.3707 9.79358 36.3207 9.64205 36.1504 9.48535 35.9806 9.456 35.7534 9.57183 35.6441 9.68965 35.5363 9.90624 35.5868 10.0633 35.7566 10.22 35.9285 10.2506 36.1541 10.1312 36.263M11.0757 37.6663C10.9289 37.77 10.6889 37.6728 10.5406 37.4561 10.3938 37.2394 10.3938 36.9796 10.5437 36.8755 10.6925 36.7714 10.9289 36.865 11.0793 37.0801 11.2257 37.3004 11.2257 37.5602 11.0757 37.6663M12.3697 39.0219C12.2384 39.1692 11.9588 39.1297 11.7541 38.9287 11.5446 38.7322 11.4863 38.4534 11.618 38.3062 11.7509 38.1585 12.0321 38.2001 12.2384 38.3994 12.4463 38.5955 12.5098 38.8763 12.3697 39.0219M14.1548 39.8091C14.0969 40 13.8276 40.0867 13.5562 40.0056 13.2853 39.9221 13.108 39.6986 13.1627 39.5057 13.219 39.3137 13.4896 39.2233 13.7629 39.31 14.0334 39.3932 14.2112 39.6151 14.1548 39.8091M16.1153 39.9552C16.122 40.1561 15.892 40.3228 15.6071 40.3264 15.3207 40.3329 15.089 40.1703 15.0859 39.9726 15.0859 39.7696 15.3108 39.6046 15.5972 39.5998 15.882 39.5941 16.1153 39.7555 16.1153 39.9552M17.9397 39.6392C17.9738 39.8353 17.7759 40.0366 17.493 40.0903 17.2149 40.1419 16.9575 40.0209 16.9222 39.8264 16.8877 39.6255 17.0892 39.4241 17.3669 39.3721 17.6501 39.3221 17.9036 39.4399 17.9397 39.6392"></path></svg>GITHUB
+        </p>
+    </a></div>
+       
+
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        console.clear();
+
+const canvas = document.createElement('canvas');
+document.body.append(canvas);
+canvas.style.display = 'block';
+canvas.style.width = '100vw';
+canvas.style.height = '100vh';
+
+canvas.width = canvas.offsetWidth;
+canvas.height = canvas.offsetHeight;
+
+const gl = canvas.getContext('webgl2');
+if (!gl) {
+    alert('require webgl 2.0, bye')
+}
+
+const vss = `#version 300 es
+in vec2 p;
+void main() {
+  gl_Position = vec4(p, 0.0, 1.0);
+}
+`;
+
+const fss = `#version 300 es
+precision mediump float;
+out vec4 o;
+uniform vec4 c;
+void main() {
+  o = c;
+}
+`;
+
+
+// Create shader program
+// # should query both shader logs and program logs
+// #  only if program link's status is false.
+// 
+// Here's the antipattern .. keep for ref
+//
+
+const vs = gl.createShader(gl.VERTEX_SHADER);
+gl.shaderSource(vs, vss);
+gl.compileShader(vs);
+if (!gl.getShaderParameter(vs, gl.COMPILE_STATUS)) {
+    console.error(gl.getShaderInfoLog(vs));
+    throw 1;
+}
+
+const fs = gl.createShader(gl.FRAGMENT_SHADER);
+gl.shaderSource(fs, fss);
+gl.compileShader(fs);
+if (!gl.getShaderParameter(fs, gl.COMPILE_STATUS)) {
+    console.error(gl.getShaderInfoLog(fs));
+    throw 2;
+}
+
+const prg = gl.createProgram();
+gl.attachShader(prg, vs);
+gl.attachShader(prg, fs);
+gl.linkProgram(prg);
+if (!gl.getProgramParameter(prg, gl.LINK_STATUS)) {
+    console.error(gl.getProgramInfoLog(prg));
+    throw 3;
+}
+
+gl.detachShader(prg, vs);
+gl.deleteShader(vs);
+gl.detachShader(prg, fs);
+gl.deleteShader(fs);
+
+// ---- End of antipattern ----
+
+const $p = gl.getAttribLocation(prg, 'p');
+const $c = gl.getUniformLocation(prg, 'c');
+
+const va = gl.createVertexArray();
+gl.bindVertexArray(va);
+
+const N = 300; // n triangles
+
+let ps;
+{    
+    ps = new Float32Array(2 + N * 2 * 2);
+    ps[0] = 0; // clip space center
+    ps[1] = 0;
+    let j = 2;
+    for (let i = 0; i < N; ++i) {
+        ps[j++] = Math.random() * 2 - 1; //x 
+        ps[j++] = Math.random() * 2 - 1; //y
+        ps[j++] = Math.random() * 2 - 1; //x 
+        ps[j++] = Math.random() * 2 - 1; //y
+    }
+}
+
+const buf = gl.createBuffer();
+gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+gl.bufferData(gl.ARRAY_BUFFER, ps, gl.DYNAMIC_DRAW);
+gl.enableVertexAttribArray($p);
+gl.vertexAttribPointer(
+    $p,
+    2, gl.FLOAT, // two 32b-float (8bytes)
+    false,
+    0, // skip n byte to fetch next
+    0  // skip n byte to fetch first
+);
+
+let idxs; 
+{ 
+    idxs = new Uint16Array(3 * N);
+    let j = 0;
+    for (let i = 0; i < N; ++i) {
+        idxs[j++] = 0;
+        idxs[j++] = 1 + i * 2;
+        idxs[j++] = 2 + i * 2;
+    }
+}
+
+const ibuf = gl.createBuffer();
+gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, ibuf);
+gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, idxs, gl.STATIC_DRAW);
+
+gl.bindVertexArray(null);
+
+//----- render
+
+gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
+gl.clearColor(0.1, 0.1, 0.1, 1);
+gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+gl.enable(gl.BLEND);
+gl.disable(gl.CULL_FACE);
+gl.useProgram(prg);
+gl.bindVertexArray(va);
+
+
+
+function f() {
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.uniform4fv($c, [0.2, 0.2, 0.2, 0.02]);
+    gl.drawElements(
+        gl.TRIANGLES,
+        idxs.length, // n indices
+        gl.UNSIGNED_SHORT, // ui16
+        0 // skip n bytes to fetch first
+    );
+}
+f();
+
+// ---
+gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+document.body.onmousemove = (e) => {
+    ps[0] = e.clientX / window.innerWidth * 2 - 1;
+    ps[1] = -1 * (e.clientY / window.innerHeight * 2 - 1);
+    gl.bufferSubData(gl.ARRAY_BUFFER, 0, ps.slice(0, 2)); // that's why DYNAMIC_DRAW
+    f();
+} 
+
+setInterval(
+function () {
+  var randomColor = Math.floor(Math.random()*16777215).toString(16);
+  document.body.style.backgroundColor = "#"+randomColor;
+},1000);
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
+

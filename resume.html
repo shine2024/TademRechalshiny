@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    body {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        display:grid;
+        justify-content:center;
+        align-content:center;
+        background-color: #FFFF00;
+        font:5vh Lora;
+    }
+    
+    a {
+        color:rgba(198, 53, 53, 0.667);
+        text-decoration:rgba(164, 33, 33, 0.267) wavy underline;
+        transition:all 0.3s;
+        &:hover {
+            color:rgba(146, 28, 28, 0.2);
+            text-shadow:0 0 100px #c20b0b;
+        }
+    }
+    
+    canvas {
+        position:fixed;
+        z-index:-1;
+    }
+    .w2{
+        width:98vw;
+         display: flex;
+        justify-content: center;
+    
+    }
+    .mee{
+        width: 30%;
+        
+        box-shadow: 0 0 10px 5px #ffffff;
+        align-items: center;
+        align-content: center;
+        border-radius: 50%;
+    }
+    .border{
+        box-shadow: 0 0 10px 5px #ffffff;
+    }
+    .h1>h1{
+     
+        color: white;
+        text-align: center;
+    }
+    .w3{
+        padding:2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    .w3>div>img{
+    margin-bottom: px;
+    width: auto;
+    height: 40px;
+    
+    }
+    .w3>div>a{
+        
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    }
+    .re{
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+    }
+    .card-text{
+      font-size: small;
+    }
+    
+    @media only screen and (min-width: 1300px) {
+        .w3{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+    margin-left: 40rem;
+            
+        }
+        .app{
+            display: flex;
+            gap: 20px 50px;
+        }
+      }
+      @import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@500&display=swap');
+        body {
+            display:grid;
+            justify-content:center;
+            align-content:center;
+            background-color: #FFFF00;
+            font:5vh Lora;
+            padding: 7px;
+            
+        }
+        
+        a {
+            color:rgba(198, 53, 53, 0.667);
+            text-decoration:rgba(164, 33, 33, 0.267) wavy underline;
+            transition:all 0.3s;
+            &:hover {
+                color:rgba(146, 28, 28, 0.2);
+                text-shadow:0 0 100px #c20b0b;
+            }
+        }
+        div>h1{
+            padding: 15px;
+            color: #fff;
+        }
+        
+        canvas {
+            position:fixed;
+            z-index:-1;
+        }
+      .para{
+        font-size: x-large;
+        color: #fff;
+      }
+        .title {
+            font-size: calc(1.525rem + 3.3vw);
+          }
+          .card{
+        box-shadow: 0 0 10px 5px #ffffff;
+        background-color: rgba(245, 245, 245, 0.4); 
+          }
+          h2{
+            color: #fff;
+            font-family: monospace;
+          }
+          
+        
+        .e{
+            width: 300px;
+        box-shadow: 0 0 10px 5px #ffffff;
+        margin: 1rem;
+        
+        }
+          
+          @media (min-width: 250px) {
+            .title {
+              font-size: 4rem;
+              
+            }
+            .resize_fit_center{ 
+            width: 30%;
+            border-radius: 50%;
+        box-shadow: 0 0 10px 5px #ffffff;
+    
+              }
+    
+              .container{
+                display: flex;
+                justify-content: center;
+              }
+              .hello{
+                display: flex;
+                margin: 40px;
+                gap: 20px 50px;
+            }
+            .card{
+                width: 30%;
+            }
+          }
+          
+          @media (max-width: 250px) {
+            .container {
+                margin: 10px;
+                width: 115px;
+                height: 115px;
+                line-height: 115px;
+                text-align: center;
+        box-shadow: 0 0 10px 5px #ffffff;
+                
+            }
+            .resize_fit_center {
+                max-width:100%;
+                max-height:100%;
+                vertical-align: middle;
+            }
+            .hello{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                background-color: transparents;
+               
+            }
+            .card{
+                width:100%;
+                margin-bottom: 30px;
+               
+            }
+          }
+    
+          @media (max-width: 600px){
+            
+            .para{
+                font-size: small;
+                color: #fff;
+              }
+              .card {
+                width: 100%; /* Adjust the width as needed for your design */
+            }
+              .hello{
+                display: flex;
+                flex-direction: column;
+                
+            }
+          .app{
+            display: flex;
+            flex-direction: column;
+            
+          }
+          .e{
+            margin: 10px;
+            width: 100%;
+        box-shadow: 0 0 10px 5px #ffffff;
+    
+          }
+          }
+       
+  </style>
+
+
+
+
+</head>
+  <body>
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <!-- Navbar content -->
+        
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#hello">Tadem Rechal Shiny</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#hello">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="resume.html">Resume</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#hrr" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      projects
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#vieo">Editing</a></li>
+                      <li><a class="dropdown-item" href="#prooo">Web pages</a></li>
+                      <li><a class="dropdown-item" href="#word">wordpress</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="#connect">Contact</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          
+      </nav>
+
+      <div id="hello">
+        <h1 class="text-white title " style="text-shadow: 1px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+        1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff; text-align:center;font-size:6vw">Tadem Rechal shiny</h1>
+        
+    </div>
+    <div class='container'>
+        <img class='resize_fit_center'
+          src='me.png' />
+        </a>
+    </div>
+    <div>
+        <p class="para">
+
+          Hey there! 👋 I'm Tadem Rechal, a creative mind passionate about editing and web development. I add that extra shine to projects with my editing skills and bring ideas to life through web development. Let's create something amazing together!
+          
+        </p>
+    </div>
+<div>
+
+</div>
+
+
+
+<div class="para" style=" box-shadow: 0 0 10px 5px #ffffff; font-size:2vw; color:rgba(234, 254, 255, 0.4); font-family: 'Kalnia', serif; " >
+NAME : Tadem Rechal Shiny
+<br>
+STUDY : Btech 4th year
+<br>
+COLLEGE : MALLA REDDY INSTITUTE OF ENGINEERING AND TECHOLOGY
+<br>
+SKILLS :
+<svg xmlns="http://www.w3.org/2000/svg" width="2%" preserveAspectRatio="xMinYMin meet" viewBox="0 0 256 255" id="python"><defs><linearGradient id="a" x1="12.959%" x2="79.639%" y1="12.039%" y2="78.201%"><stop offset="0%" stop-color="#387EB8"></stop><stop offset="100%" stop-color="#366994"></stop></linearGradient><linearGradient id="b" x1="19.128%" x2="90.742%" y1="20.579%" y2="88.429%"><stop offset="0%" stop-color="#FFE052"></stop><stop offset="100%" stop-color="#FFC331"></stop></linearGradient></defs><path fill="url(#a)" d="M126.916.072c-64.832 0-60.784 28.115-60.784 28.115l.072 29.128h61.868v8.745H41.631S.145 61.355.145 126.77c0 65.417 36.21 63.097 36.21 63.097h21.61v-30.356s-1.165-36.21 35.632-36.21h61.362s34.475.557 34.475-33.319V33.97S194.67.072 126.916.072zM92.802 19.66a11.12 11.12 0 0 1 11.13 11.13 11.12 11.12 0 0 1-11.13 11.13 11.12 11.12 0 0 1-11.13-11.13 11.12 11.12 0 0 1 11.13-11.13z"></path><path fill="url(#b)" d="M128.757 254.126c64.832 0 60.784-28.115 60.784-28.115l-.072-29.127H127.6v-8.745h86.441s41.486 4.705 41.486-60.712c0-65.416-36.21-63.096-36.21-63.096h-21.61v30.355s1.165 36.21-35.632 36.21h-61.362s-34.475-.557-34.475 33.32v56.013s-5.235 33.897 62.518 33.897zm34.114-19.586a11.12 11.12 0 0 1-11.13-11.13 11.12 11.12 0 0 1 11.13-11.131 11.12 11.12 0 0 1 11.13 11.13 11.12 11.12 0 0 1-11.13 11.13z"></path></svg> 
+<svg xmlns="http://www.w3.org/2000/svg" width="2%"  viewBox="0 0 128 128" id="java"><path fill="#0074BD" d="M52.581 67.817s-3.284 1.911 2.341 2.557c6.814.778 10.297.666 17.805-.753 0 0 1.979 1.237 4.735 2.309-16.836 7.213-38.104-.418-24.881-4.113zM50.522 58.402s-3.684 2.729 1.945 3.311c7.28.751 13.027.813 22.979-1.103 0 0 1.373 1.396 3.536 2.157-20.352 5.954-43.021.469-28.46-4.365z"></path><path fill="#EA2D2E" d="M67.865 42.431c4.151 4.778-1.088 9.074-1.088 9.074s10.533-5.437 5.696-12.248c-4.519-6.349-7.982-9.502 10.771-20.378.001 0-29.438 7.35-15.379 23.552z"></path><path fill="#0074BD" d="M90.132 74.781s2.432 2.005-2.678 3.555c-9.716 2.943-40.444 3.831-48.979.117-3.066-1.335 2.687-3.187 4.496-3.576 1.887-.409 2.965-.334 2.965-.334-3.412-2.403-22.055 4.719-9.469 6.762 34.324 5.563 62.567-2.506 53.665-6.524zM54.162 48.647s-15.629 3.713-5.534 5.063c4.264.57 12.758.439 20.676-.225 6.469-.543 12.961-1.704 12.961-1.704s-2.279.978-3.93 2.104c-15.874 4.175-46.533 2.23-37.706-2.038 7.463-3.611 13.533-3.2 13.533-3.2zM82.2 64.317c16.135-8.382 8.674-16.438 3.467-15.353-1.273.266-1.845.496-1.845.496s.475-.744 1.378-1.063c10.302-3.62 18.223 10.681-3.322 16.345 0 0 .247-.224.322-.425z"></path><path fill="#EA2D2E" d="M72.474 1.313s8.935 8.939-8.476 22.682c-13.962 11.027-3.184 17.313-.006 24.498-8.15-7.354-14.128-13.828-10.118-19.852 5.889-8.842 22.204-13.131 18.6-27.328z"></path><path fill="#0074BD" d="M55.749 87.039c15.484.99 39.269-.551 39.832-7.878 0 0-1.082 2.777-12.799 4.981-13.218 2.488-29.523 2.199-39.191.603 0 0 1.98 1.64 12.158 2.294z"></path><path fill="#EA2D2E" d="M94.866 100.181h-.472v-.264h1.27v.264h-.47v1.317h-.329l.001-1.317zm2.535.066h-.006l-.468 1.251h-.216l-.465-1.251h-.005v1.251h-.312v-1.581h.457l.431 1.119.432-1.119h.454v1.581h-.302v-1.251zM53.211 115.037c-1.46 1.266-3.004 1.978-4.391 1.978-1.974 0-3.045-1.186-3.045-3.085 0-2.055 1.146-3.56 5.738-3.56h1.697v4.667h.001zm4.031 4.548v-14.077c0-3.599-2.053-5.973-6.997-5.973-2.886 0-5.416.714-7.473 1.622l.592 2.493c1.62-.595 3.715-1.147 5.771-1.147 2.85 0 4.075 1.147 4.075 3.521v1.779h-1.424c-6.921 0-10.044 2.685-10.044 6.723 0 3.479 2.058 5.456 5.933 5.456 2.49 0 4.351-1.028 6.088-2.533l.316 2.137h3.163v-.001zM70.694 119.585h-5.027l-6.051-19.689h4.391l3.756 12.099.835 3.635c1.896-5.258 3.24-10.596 3.912-15.733h4.271c-1.143 6.481-3.203 13.598-6.087 19.688zM89.982 115.037c-1.465 1.266-3.01 1.978-4.392 1.978-1.976 0-3.046-1.186-3.046-3.085 0-2.055 1.149-3.56 5.736-3.56h1.701v4.667h.001zm4.033 4.548v-14.077c0-3.599-2.059-5.973-6.999-5.973-2.889 0-5.418.714-7.475 1.622l.593 2.493c1.62-.595 3.718-1.147 5.774-1.147 2.846 0 4.074 1.147 4.074 3.521v1.779h-1.424c-6.923 0-10.045 2.685-10.045 6.723 0 3.479 2.056 5.456 5.93 5.456 2.491 0 4.349-1.028 6.091-2.533l.318 2.137h3.163v-.001zM37.322 122.931c-1.147 1.679-3.005 3.008-5.037 3.757l-1.989-2.345c1.547-.794 2.872-2.075 3.489-3.269.532-1.063.753-2.43.753-5.701v-22.482h4.284v22.173c0 4.375-.348 6.144-1.5 7.867z"></path></svg> 
+<svg xmlns="http://www.w3.org/2000/svg" width="2%"  viewBox="0 0 16 16" id="css"><path fill="#2196F3" d="m1 0 1.275 14.4L8 16l5.723-1.599L15 0z"></path><path fill="#FAFAFA" d="m12.274 4.709-.161 1.809-.486 5.423L8 12.944l-.003.001-3.625-1.004-.253-2.836h1.776l.132 1.471 1.971.532.001-.001 1.974-.532.269-2.451-6.208.017-.176-1.676 6.533-.077.132-1.794-6.84.019-.115-1.669h8.864z"></path></svg> 
+<svg xmlns="http://www.w3.org/2000/svg" width="2%"  viewBox="0 0 128 128" id="c"><path fill="#03599C" d="M117.5 33.5l.3-.2c-.6-1.1-1.5-2.1-2.4-2.6l-48.3-27.8c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.3.9 3.4l-.2.1c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4v-55.8c.1-.8 0-1.7-.4-2.6zm-53.5 55c9.1 0 17.1-5 21.3-12.4l12.9 7.6c-6.8 11.8-19.6 19.8-34.2 19.8-21.8 0-39.5-17.7-39.5-39.5s17.7-39.5 39.5-39.5c14.7 0 27.5 8.1 34.3 20l-13 7.5c-4.2-7.5-12.2-12.5-21.3-12.5-13.5 0-24.5 11-24.5 24.5s11 24.5 24.5 24.5z"></path></svg> 
+<svg xmlns="http://www.w3.org/2000/svg" width="2%"  xmlns:xlink="http://www.w3.org/1999/xlink"" viewBox="0 0 122.522 122.523" id="wordpress"><defs><path id="a" d="M0 0h122.522v122.523H0z"></path></defs><clipPath id="b"><use overflow="visible" xlink:href="#a"></use></clipPath><g clip-path="url(#b)"><path fill="#00749a" d="M313.19 48.227h-21.257v2.255c6.649 0 7.718 1.425 7.718 9.856V75.54c0 8.431-1.067 9.976-7.718 9.976-5.104-.713-8.55-3.444-13.3-8.67l-5.462-5.937c7.361-1.308 11.28-5.938 11.28-11.164 0-6.53-5.58-11.518-16.031-11.518h-20.9v2.255c6.649 0 7.718 1.425 7.718 9.856V75.54c0 8.431-1.068 9.976-7.718 9.976v2.256h23.631v-2.256c-6.648 0-7.718-1.545-7.718-9.976v-4.273h2.019l13.182 16.505h34.557c16.981 0 24.345-9.024 24.345-19.832-.002-10.807-7.364-19.713-24.346-19.713zm-49.756 19.355V51.79h4.868c5.343 0 7.719 3.681 7.719 7.956 0 4.157-2.376 7.837-7.719 7.837l-4.868-.001zm50.113 16.508h-.832c-4.274 0-4.868-1.067-4.868-6.53V51.79h5.7c12.35 0 14.604 9.024 14.604 16.031.001 7.243-2.255 16.269-14.604 16.269zM181.378 71.978l8.193-24.228c2.376-7.006 1.308-9.023-6.293-9.023v-2.376h22.325v2.376c-7.48 0-9.262 1.78-12.23 10.449L179.834 89.79h-1.543l-12.114-37.17-12.349 37.17h-1.545l-13.181-40.613c-2.85-8.669-4.75-10.449-11.638-10.449v-2.376h26.363v2.376c-7.008 0-8.908 1.662-6.413 9.023l7.956 24.228 11.993-35.627h2.258l11.757 35.626zM221.752 89.314c-13.062 0-23.75-9.618-23.75-21.376 0-11.638 10.688-21.257 23.75-21.257s23.75 9.619 23.75 21.257c0 11.758-10.687 21.376-23.75 21.376zm0-38.949c-10.924 0-14.726 9.854-14.726 17.574 0 7.839 3.802 17.576 14.726 17.576 11.045 0 14.845-9.737 14.845-17.576 0-7.72-3.8-17.574-14.845-17.574z"></path><path fill="#464342" d="M366.864 85.396v2.375H339.67v-2.375c7.957 0 9.382-2.019 9.382-13.896V52.502c0-11.877-1.425-13.775-9.382-13.775V36.35h24.581c12.23 0 19.002 6.294 19.002 14.727 0 8.194-6.771 14.606-19.002 14.606h-6.77V71.5c.001 11.878 1.425 13.896 9.383 13.896zm-2.613-44.771h-6.77v20.664h6.77c6.65 0 9.737-4.631 9.737-10.212.001-5.7-3.086-10.452-9.737-10.452zM464.833 76.609l-.595 2.137c-1.067 3.919-2.376 5.344-10.807 5.344h-1.663c-6.174 0-7.243-1.425-7.243-9.855v-5.462c9.263 0 9.976.83 9.976 7.006h2.257V58.083h-2.257c0 6.175-.713 7.006-9.976 7.006V51.79h6.53c8.433 0 9.738 1.425 10.807 5.344l.596 2.256h1.898l-.83-11.162h-34.914v2.255c6.649 0 7.719 1.425 7.719 9.856V75.54c0 7.713-.907 9.656-6.15 9.934-4.983-.762-8.404-3.479-13.085-8.628l-5.463-5.937c7.363-1.308 11.282-5.938 11.282-11.164 0-6.53-5.581-11.518-16.031-11.518h-20.9v2.255c6.649 0 7.719 1.425 7.719 9.856V75.54c0 8.431-1.068 9.976-7.719 9.976v2.256h23.632v-2.256c-6.648 0-7.719-1.545-7.719-9.976v-4.273h2.02l13.181 16.505h48.806l.713-11.161-1.784-.002zm-62.937-9.027V51.79h4.868c5.344 0 7.72 3.681 7.72 7.956 0 4.157-2.376 7.837-7.72 7.837l-4.868-.001zM488.939 89.314c-4.75 0-8.907-2.493-10.688-4.038-.595.595-1.662 2.376-1.899 4.038h-2.257V72.927h2.375c.951 7.838 6.412 12.469 13.419 12.469 3.8 0 6.888-2.138 6.888-5.699 0-3.087-2.73-5.463-7.6-7.719l-6.77-3.206c-4.751-2.258-8.312-6.178-8.312-11.401 0-5.7 5.344-10.568 12.707-10.568 3.919 0 7.243 1.426 9.263 3.088.593-.476 1.188-1.782 1.544-3.208h2.256v14.014h-2.494c-.832-5.582-3.919-10.213-10.212-10.213-3.325 0-6.413 1.899-6.413 4.87 0 3.087 2.493 4.749 8.194 7.361l6.53 3.206c5.701 2.731 7.956 7.127 7.956 10.689 0 7.48-6.531 12.704-14.487 12.704zM525.514 89.314c-4.751 0-8.908-2.493-10.688-4.038-.594.595-1.662 2.376-1.898 4.038h-2.257V72.927h2.375c.95 7.838 6.411 12.469 13.419 12.469 3.8 0 6.888-2.138 6.888-5.699 0-3.087-2.731-5.463-7.601-7.719l-6.77-3.206c-4.75-2.258-8.312-6.178-8.312-11.401 0-5.7 5.344-10.568 12.707-10.568 3.919 0 7.242 1.426 9.263 3.088.593-.476 1.187-1.782 1.542-3.208h2.257v14.014h-2.493c-.832-5.582-3.919-10.213-10.212-10.213-3.325 0-6.414 1.899-6.414 4.87 0 3.087 2.494 4.749 8.195 7.361l6.53 3.206c5.7 2.731 7.955 7.127 7.955 10.689 0 7.48-6.531 12.704-14.486 12.704z"></path><g fill="#00749a"><path d="M8.708 61.26c0 20.803 12.089 38.779 29.619 47.299L13.258 39.872a52.354 52.354 0 0 0-4.55 21.388zM96.74 58.608c0-6.495-2.333-10.993-4.334-14.494-2.664-4.329-5.16-7.995-5.16-12.324 0-4.831 3.663-9.328 8.824-9.328.233 0 .454.029.682.042-9.351-8.566-21.808-13.796-35.49-13.796-18.36 0-34.513 9.42-43.91 23.688 1.233.037 2.396.062 3.382.062 5.497 0 14.006-.667 14.006-.667 2.833-.167 3.167 3.994.338 4.329 0 0-2.848.335-6.016.501L48.2 93.546l11.502-34.493-8.189-22.433c-2.83-.166-5.511-.501-5.511-.501-2.832-.166-2.5-4.496.332-4.329 0 0 8.679.667 13.843.667 5.496 0 14.006-.667 14.006-.667 2.835-.167 3.168 3.994.337 4.329 0 0-2.853.335-6.015.501l18.992 56.494 5.241-17.517c2.273-7.269 4.002-12.49 4.002-16.989z"></path><path d="M62.184 65.857l-15.768 45.818a52.516 52.516 0 0 0 14.846 2.142c6.12 0 11.989-1.059 17.452-2.979a4.451 4.451 0 0 1-.374-.724L62.184 65.857zM107.376 36.046c.226 1.674.354 3.472.354 5.404 0 5.333-.996 11.328-3.996 18.824l-16.053 46.413c15.624-9.111 26.133-26.038 26.133-45.427a52.268 52.268 0 0 0-6.438-25.214z"></path><path d="M61.262 0C27.483 0 0 27.481 0 61.26c0 33.783 27.482 61.264 61.262 61.264 33.778 0 61.265-27.48 61.265-61.264C122.526 27.481 95.04 0 61.262 0zm0 119.715c-32.23 0-58.453-26.223-58.453-58.455 0-32.229 26.222-58.45 58.453-58.45 32.229 0 58.45 26.221 58.45 58.45 0 32.232-26.222 58.455-58.45 58.455z"></path></g></g></svg> 
+<svg xmlns="http://www.w3.org/2000/svg" width="2%"  " viewBox="0 0 148.474 47.271" id="microsoft-office"><g data-name="microsoft office"><path fill="#eb3c00" d="M.5,38.634V9.9L25.917.5l13.816,4.42V43.608L25.917,47.773.5,38.634l25.421,3.059V8.24L9.338,12.108V34.767L.5,38.634Zm66.312.2a12.389,12.389,0,0,1-9.614-3.957,14.666,14.666,0,0,1-3.611-10.293q0-6.809,3.68-10.863T67.28,9.668A12.112,12.112,0,0,1,76.7,13.6,14.727,14.727,0,0,1,80.269,23.9q0,6.907-3.661,10.923a12.608,12.608,0,0,1-9.8,4.015Zm.236-26.176a9.1,9.1,0,0,0-7.222,3.208,12.417,12.417,0,0,0-2.776,8.423,12.511,12.511,0,0,0,2.706,8.394,8.824,8.824,0,0,0,7.055,3.178,9.266,9.266,0,0,0,7.321-3.031Q76.8,29.8,76.805,24.351q0-5.59-2.6-8.64a8.9,8.9,0,0,0-7.163-3.052ZM92.03,8.092A6.168,6.168,0,0,0,87.471,9.94a6.787,6.787,0,0,0-1.831,5.008v3.265H82.2v2.763H85.64v17.39h3.213V20.976h7.857v17.39h3.213V20.976h4.715V18.213H99.922V15.1q0-4.27,3.385-4.265a4.281,4.281,0,0,1,2.141.518v-2.9a6.889,6.889,0,0,0-6.907,1.485,6.786,6.786,0,0,0-1.831,5.008v3.265H88.853V15.106q0-4.271,3.384-4.266a4.285,4.285,0,0,1,2.141.518v-2.9a6.3,6.3,0,0,0-2.349-.365Zm17.3,5a2.047,2.047,0,0,1-1.477-.591,1.993,1.993,0,0,1-.61-1.5A2.068,2.068,0,0,1,109.33,8.9a2.081,2.081,0,0,1,1.506.6,2.1,2.1,0,0,1,0,2.981A2.07,2.07,0,0,1,109.33,13.091ZM110.9,38.36h-3.228V18.207H110.9V38.36Zm18.336-.924a10.491,10.491,0,0,1-5.51,1.4,9.117,9.117,0,0,1-6.956-2.805,10.167,10.167,0,0,1-2.649-7.272,11.17,11.17,0,0,1,2.854-8,9.983,9.983,0,0,1,7.617-3.021,10.6,10.6,0,0,1,4.683.985v3.305a8.209,8.209,0,0,0-4.8-1.574,6.493,6.493,0,0,0-5.069,2.214,8.4,8.4,0,0,0-1.977,5.815,8,8,0,0,0,1.859,5.59,6.413,6.413,0,0,0,4.99,2.046,8.094,8.094,0,0,0,4.959-1.751v3.07Zm19.729-8.344H134.742a7.542,7.542,0,0,0,1.809,5.2,6.25,6.25,0,0,0,4.764,1.829,9.9,9.9,0,0,0,6.258-2.244V36.9a11.7,11.7,0,0,1-7.025,1.929,8.513,8.513,0,0,1-6.711-2.746Q131.4,33.34,131.4,28.362a11.024,11.024,0,0,1,2.666-7.666,8.55,8.55,0,0,1,6.622-2.961,7.576,7.576,0,0,1,6.12,2.558,10.668,10.668,0,0,1,2.164,7.1v1.694Zm-3.305-2.736a6.564,6.564,0,0,0-1.349-4.349,4.592,4.592,0,0,0-3.69-1.555,5.216,5.216,0,0,0-3.878,1.634,7.41,7.41,0,0,0-1.967,4.27h10.882Z" data-name="Path 26" transform="translate(-.496 -.502)"></path></g></svg> 
+<svg xmlns="http://www.w3.org/2000/svg" width="2%"   data-name="Layer 1" viewBox="0 0 256 256" id="adobe-premiere-pro"><g data-name="Photo Surface"><rect " x="8" y="12" fill="#00005b" data-name="Outline no shadow" rx="42"></rect></g><path fill="#99f" d="M60 182.88V74a1 1 0 011.12-1.12C69.23 72.67 78.8 72 91.28 72c14.72 0 25.52 3.07 32.4 9.68A32.6 32.6 0 01134 106.16q0 18.09-12.8 26.88T89 141.84L80 142v40.72A1.13 1.13 0 0178.72 184H61.28C60.43 184 60 183.63 60 182.88zM80 87.62V127s4.56-.18 10-.18q10.73 0 17.36-4.72T114 106.64q0-9.44-5.84-14.56T91.28 87c-1.81 0-3.6 0-5.36.08s-3.2.08-4.32.08S79.88 87.12 80 87.62zM149 104h17a1.84 1.84 0 011.83 1.33A23.4 23.4 0 01170 114c6.42-8.3 14.32-12 24.84-12a1 1 0 011.16 1.16v17.66c0 .89-.44 1.27-1.33 1.16-9.63-.55-17.27.71-22.8 6.24A5.24 5.24 0 00170 132v50.84c0 .77-.44 1.16-1.33 1.16H151.49c-1 0-1.49-.44-1.49-1.33V126c0-13.42-1-15.33-2-20.84C147.89 104.39 148.22 104 149 104z"></path></svg> 
+<svg xmlns="http://www.w3.org/2000/svg" width="2%"  viewBox="0 0 307.692 300" id="after-effects"><defs><radialGradient id="a" cx="117.022" cy="207.973" r="220.369" gradientTransform="matrix(.973 0 0 .942 2.515 3.053)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#442f55" stop-opacity=".98"></stop><stop offset="1" stop-color="#12002c"></stop></radialGradient></defs><g data-name="After effects" transform="translate(0 -130.746)"><path fill="url(#a)" d="M24.8,155.549H306.854V429.908H24.8Z" data-name="Path 3" transform="translate(-11.983 -11.983)"></path><path fill="#d8a1ff" d="M12.82,143.566H294.871V417.925H12.82ZM0,430.746H307.692v-300H0ZM217.692,275.361c6.538,0,8.846,0,9.487-.256,0-.9.256-1.539.256-2.18,0-6.923-3.333-19.743-16.666-19.743-12.308,0-17.564,10.769-18.846,22.18h25.769Zm-26.025,17.564c.256,17.308,8.461,28.975,27.949,28.975a50.176,50.176,0,0,0,20.9-3.974c.9-.385,1.539-.256,1.539.9v16.026a2.715,2.715,0,0,1-1.282,2.564c-6.795,3.333-15.257,4.872-25.769,4.872-33.846,0-46.538-25-46.538-52.82,0-30.256,15.641-55,43.205-55,27.949,0,37.692,23.461,37.692,42.564,0,6.154-.385,11.154-1.026,13.59a1.907,1.907,0,0,1-1.667,1.667,185.6,185.6,0,0,1-21.41.9h-33.59Zm-68.717-13.077c-3.59-14.231-12.308-45.256-15.513-60.256h-.256c-2.692,15-9.744,40.384-15,60.256Zm-36.026,20.77L76.795,338.951c-.256,1.025-.641,1.41-1.923,1.41H56.025c-1.282,0-1.539-.385-1.282-1.923l36.41-127.308c.641-2.307,1.026-4.1,1.282-10.512,0-.9.385-1.282,1.025-1.282h26.923c.9,0,1.282.256,1.539,1.282l40.769,138.077c.256,1.025,0,1.666-1.025,1.666H140.512a1.736,1.736,0,0,1-1.923-1.281l-10.513-38.461H86.923Z" data-name="Path 4"></path></g></svg> 
+<svg xmlns="http://www.w3.org/2000/svg" width="2%"  enable-background="new 0 0 100 100" viewBox="0 0 100 100" id="canva"><circle cx="50" cy="51" r="49" fill="#20c4cb"></circle><path fill="#fff" d="M62.7,59.2c-2,2.2-4.8,3.3-6.1,3.3c-1.5,0-2.3-0.9-2.5-2.3c-0.1-0.5,0-1.1,0.1-1.6c0.5-3.1,1.6-5.1,1.6-5.6c0-0.2-0.1-0.3-0.2-0.3c-1,0-4.4,3.5-4.9,5.8l-0.4,1.9c-0.3,1.3-1.5,2.1-2.4,2.1c-0.4,0-0.7-0.2-0.8-0.7c0-0.2,0-0.4,0-0.6l0.2-1c-1.8,1.4-3.8,2.3-4.7,2.3c-1.3,0-2-0.7-2.2-1.7c-0.8,1.1-1.9,1.7-3.1,1.7c-1.5,0-2.9-1-3.6-2.5c-1,1.1-2.2,2.2-3.6,3.1c-2.1,1.3-4.4,2.4-7.1,2.4c-2.5,0-4.7-1.3-5.8-2.4c-1.8-1.6-2.7-4.1-3-6.3c-0.9-7,3.4-16.3,10.1-20.3c1.5-0.9,3.2-1.4,4.8-1.4c3.2,0,5.6,2.3,5.9,5c0.3,2.5-0.7,4.6-3.4,5.9c-1.4,0.7-2.1,0.7-2.3,0.3c-0.1-0.2-0.1-0.6,0.2-0.8c2.6-2.1,2.6-3.9,2.3-6.4c-0.2-1.6-1.2-2.6-2.4-2.6C24.2,36.5,17,47.8,18,56c0.4,3.2,2.4,6.9,6.4,6.9c1.3,0,2.8-0.4,4-1c2.2-1.1,3.5-2,4.7-3.5c-0.3-3.8,3-8.6,7.8-8.6c2.1,0,3.8,0.8,4,2.5c0.3,2.1-1.5,2.5-2.2,2.5c-0.6,0-1.5-0.2-1.6-0.7c-0.1-0.6,1.3-0.3,1.1-1.6c-0.1-0.8-1-1.1-1.8-1.1c-3,0-4.7,4.2-4.4,6.8c0.1,1.2,0.8,2.4,1.8,2.4c0.9,0,2.2-1.3,2.6-3.1c0.3-1.3,1.5-2.1,2.4-2.1c0.5,0,0.8,0.2,0.8,0.7c0,0.2,0,0.4,0,0.6c-0.1,0.5-0.5,2.4-0.5,2.7c0,0.3,0.2,0.8,0.8,0.8c0.5,0,2.1-0.9,3.7-2.3c0.5-2.5,1.1-5.6,1.1-5.8c0.2-1,0.6-2.1,2.6-2.1c0.4,0,0.7,0.2,0.8,0.7c0,0.2,0,0.4,0,0.6L51.6,54c1.8-2.4,4.6-4.2,6.3-4.2c0.7,0,1.3,0.4,1.4,1.1c0.1,0.4-0.1,1.1-0.3,1.9c-0.6,1.6-1.3,4.1-1.7,6.2c-0.1,0.5,0.1,1.1,0.9,1.1c0.7,0,2.8-0.8,4.5-3.1c0-0.3,0-0.6,0-1c0-1.8,0.1-3.2,0.5-4.3c0.3-1.1,1.7-2.1,2.6-2.1c0.5,0,0.8,0.3,0.8,0.8c0,0.2,0,0.4-0.1,0.6c-0.6,1.9-1,3.6-1,5.3c0,1,0.2,2.5,0.4,3.3c0,0.2,0.1,0.3,0.3,0.3c0.3,0,2.3-1.9,3.7-4.3c-1.3-0.8-2-2.3-2-4.1c0-3,1.8-4.6,3.6-4.6c1.4,0,2.6,1,2.6,3c0,1.3-0.5,2.7-1.2,4.1c0,0,0.3,0,0.4,0c1.1,0,1.9-0.5,2.4-1.1c0.2-0.2,0.4-0.4,0.6-0.5c1.4-1.7,3.5-2.9,5.9-2.9c2.1,0,3.8,0.8,4,2.5c0.3,2.1-1.6,2.6-2.2,2.6c-0.6,0-1.6-0.2-1.6-0.7c-0.1-0.5,1.3-0.3,1.2-1.6c-0.1-0.8-1-1.2-1.8-1.2c-2.8,0-4.7,3.7-4.4,6.8c0.1,1.2,0.7,2.4,1.8,2.4c0.9,0,2.2-1.3,2.7-3.1c0.3-1.2,1.5-2.1,2.4-2.1c0.4,0,0.8,0.2,0.8,0.7c0,0.3-0.1,0.8-0.5,2.8c-0.2,0.8-0.2,1.6-0.2,2.1c0.2,1.2,0.7,2,1.2,2.5c0.2,0.2,0.3,0.4,0.3,0.5c0,0.3-0.2,0.6-0.6,0.6c-0.1,0-0.3,0-0.4-0.1c-2.2-0.9-3.1-2.4-3.3-3.7c-0.8,1.1-1.9,1.6-3.1,1.6c-1.9,0-3.8-1.7-4.1-3.9c-0.1-0.9,0-1.9,0.3-2.8c-0.8,0.5-1.6,0.8-2.4,0.8c-0.3,0-0.5,0-0.7,0c-1.9,2.7-3.9,4.6-5.4,5.5c-0.6,0.3-1.2,0.5-1.6,0.5c-0.3,0-0.7-0.1-0.9-0.4C63.1,61.4,62.8,60.4,62.7,59.2L62.7,59.2z M69.5,50.2c0,1.2,0.6,2.4,1.3,3.2c0.3-0.8,0.5-1.6,0.5-2.4c0-1.5-0.6-2.2-1-2.2C69.7,48.8,69.5,49.6,69.5,50.2z"></path></svg> 
+
+
+</div>
+
+
+
+
+
+
+
+
+<script>
+        console.clear();
+
+const canvas = document.createElement('canvas');
+document.body.append(canvas);
+canvas.style.display = 'block';
+canvas.style.width = '100vw';
+canvas.style.height = '100vh';
+
+canvas.width = canvas.offsetWidth;
+canvas.height = canvas.offsetHeight;
+
+const gl = canvas.getContext('webgl2');
+if (!gl) {
+    alert('require webgl 2.0, bye')
+}
+
+const vss = `#version 300 es
+in vec2 p;
+void main() {
+  gl_Position = vec4(p, 0.0, 1.0);
+}
+`;
+
+const fss = `#version 300 es
+precision mediump float;
+out vec4 o;
+uniform vec4 c;
+void main() {
+  o = c;
+}
+`;
+
+
+// Create shader program
+// # should query both shader logs and program logs
+// #  only if program link's status is false.
+// 
+// Here's the antipattern .. keep for ref
+//
+
+const vs = gl.createShader(gl.VERTEX_SHADER);
+gl.shaderSource(vs, vss);
+gl.compileShader(vs);
+if (!gl.getShaderParameter(vs, gl.COMPILE_STATUS)) {
+    console.error(gl.getShaderInfoLog(vs));
+    throw 1;
+}
+
+const fs = gl.createShader(gl.FRAGMENT_SHADER);
+gl.shaderSource(fs, fss);
+gl.compileShader(fs);
+if (!gl.getShaderParameter(fs, gl.COMPILE_STATUS)) {
+    console.error(gl.getShaderInfoLog(fs));
+    throw 2;
+}
+
+const prg = gl.createProgram();
+gl.attachShader(prg, vs);
+gl.attachShader(prg, fs);
+gl.linkProgram(prg);
+if (!gl.getProgramParameter(prg, gl.LINK_STATUS)) {
+    console.error(gl.getProgramInfoLog(prg));
+    throw 3;
+}
+
+gl.detachShader(prg, vs);
+gl.deleteShader(vs);
+gl.detachShader(prg, fs);
+gl.deleteShader(fs);
+
+// ---- End of antipattern ----
+
+const $p = gl.getAttribLocation(prg, 'p');
+const $c = gl.getUniformLocation(prg, 'c');
+
+const va = gl.createVertexArray();
+gl.bindVertexArray(va);
+
+const N = 300; // n triangles
+
+let ps;
+{    
+    ps = new Float32Array(2 + N * 2 * 2);
+    ps[0] = 0; // clip space center
+    ps[1] = 0;
+    let j = 2;
+    for (let i = 0; i < N; ++i) {
+        ps[j++] = Math.random() * 2 - 1; //x 
+        ps[j++] = Math.random() * 2 - 1; //y
+        ps[j++] = Math.random() * 2 - 1; //x 
+        ps[j++] = Math.random() * 2 - 1; //y
+    }
+}
+
+const buf = gl.createBuffer();
+gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+gl.bufferData(gl.ARRAY_BUFFER, ps, gl.DYNAMIC_DRAW);
+gl.enableVertexAttribArray($p);
+gl.vertexAttribPointer(
+    $p,
+    2, gl.FLOAT, // two 32b-float (8bytes)
+    false,
+    0, // skip n byte to fetch next
+    0  // skip n byte to fetch first
+);
+
+let idxs; 
+{ 
+    idxs = new Uint16Array(3 * N);
+    let j = 0;
+    for (let i = 0; i < N; ++i) {
+        idxs[j++] = 0;
+        idxs[j++] = 1 + i * 2;
+        idxs[j++] = 2 + i * 2;
+    }
+}
+
+const ibuf = gl.createBuffer();
+gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, ibuf);
+gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, idxs, gl.STATIC_DRAW);
+
+gl.bindVertexArray(null);
+
+//----- render
+
+gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
+gl.clearColor(0.1, 0.1, 0.1, 1);
+gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+gl.enable(gl.BLEND);
+gl.disable(gl.CULL_FACE);
+gl.useProgram(prg);
+gl.bindVertexArray(va);
+
+
+
+function f() {
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.uniform4fv($c, [0.2, 0.2, 0.2, 0.02]);
+    gl.drawElements(
+        gl.TRIANGLES,
+        idxs.length, // n indices
+        gl.UNSIGNED_SHORT, // ui16
+        0 // skip n bytes to fetch first
+    );
+}
+f();
+
+// ---
+gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+document.body.onmousemove = (e) => {
+    ps[0] = e.clientX / window.innerWidth * 2 - 1;
+    ps[1] = -1 * (e.clientY / window.innerHeight * 2 - 1);
+    gl.bufferSubData(gl.ARRAY_BUFFER, 0, ps.slice(0, 2)); // that's why DYNAMIC_DRAW
+    f();
+} 
+
+setInterval(
+function () {
+  var randomColor = Math.floor(Math.random()*16777215).toString(16);
+  document.body.style.backgroundColor = "#"+randomColor;
+},1000);
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
+
